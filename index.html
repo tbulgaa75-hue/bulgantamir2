@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #spider1{
+            margin-top: 0px;
+            margin-left: 400px;
+        }
+        #spider2{
+            width: 200px;
+            position: absolute;
+            margin-top: 0px;
+            margin-left: 800px;
+        }
+        
+    </style>
+    <body style="margin: 0 auto;"onkeypress="myFunc(event)">
+        <div style="
+            width: 100%;
+            background-image: url(pngwing.com.png);
+            background-size: contain;
+            height: 1500px;
+            "
+        >
+            <img id="spider1" src="spider.png"/>
+            <img id="spider2" src="2.png"/>
+        </div>
+        <script>
+            let spider1=document.getElementById("spider1");
+            let spider2=document.getElementById("spider2");
+            let top1=0;
+            let top2=0;
+            function myFunc(event) {
+                if (event.key=="a") {
+                    top1+=50;
+                    spider1.style.marginTop=top1+"px"
+                } else if (event.key=="d"){
+                    top2+=50;
+                    spider2.style.marginTop=top2+"px"
+                }
+                if (top1>550){
+                    alert("spider 1 win")
+                    spider1.style.marginTop=0+"px"
+                    spider2.style.marginTop=0+"px"
+                    top1=0;
+                    top2=0;
+                }else if (top2>550){
+                    alert("spider 2 win")
+                    spider1.style.marginTop=0+"px"
+                    spider2.style.marginTop=0+"px"
+                    top1=0;
+                    top2=0;
+                }
+            }
+        </script>
+    </body>
+</head>
+<body>
+    
+</body>
+</html>
